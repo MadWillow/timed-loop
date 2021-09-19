@@ -55,6 +55,7 @@ $loop->forMaximumSeconds(60);
 
 // run the loop until the callable returns a non-null-value, and return said value
 $nextItem = $loop($repository, $options);
+// you can also use $loop->invoke($repository, $options) if you don't like invoking variables ;)
 ```
 
 all methods are chainable, therefore the following call would be equivalent:
@@ -64,7 +65,7 @@ $nextItem = (new TimedLoop([$repositoryAdapter, 'getNextItem']))
             ->untilItReturnsSomethingElseThan(null)
             ->retryingAfterMicroseconds(100_000)
             ->forMaximumSeconds(60)
-            ($repository, $options);
+            ->invoke($repository, $options);
 ```
 
 ### Static

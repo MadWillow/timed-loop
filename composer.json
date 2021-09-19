@@ -1,0 +1,23 @@
+{
+    "name": "rikta/timed-loop",
+    "description": "Run an endless loop until it returns something different, but limit it by time",
+    "version": "0.0.1",
+    "scripts": {
+        "release": "conventional-changelog --commit",
+        "style": "./vendor/bin/php-cs-fixer fix --diff -v",
+        "test": "./vendor/bin/phpunit tests"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.1",
+        "marcocesarato/php-conventional-changelog": "^1.12"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dennis Richter",
+            "email": "richter@vivaldi.net"
+        }
+    ],
+    "type": "library"
+}
