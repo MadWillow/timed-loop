@@ -19,5 +19,15 @@
             "email": "richter@vivaldi.net"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Rikta\\TimedLoop\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rikta\\TimedLoop\\Tests\\": "tests/"
+        }
+    },
     "type": "library"
 }
