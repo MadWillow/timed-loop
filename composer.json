@@ -1,7 +1,7 @@
 {
     "name": "rikta/timed-loop",
     "description": "Run an endless loop until it returns something different, but limit it by time",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "scripts": {
         "release": "conventional-changelog --commit",
         "style": "./vendor/bin/php-cs-fixer fix --diff -v",
