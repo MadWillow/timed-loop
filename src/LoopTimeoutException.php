@@ -1,9 +1,13 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
+
 namespace Rikta\TimedLoop;
+
 use RuntimeException;
 
 /**
- * Exception is thrown when a TimedLoop reaches it's timeout without returning anything else than the "continue"-value
+ * Exception is thrown when a TimedLoop reaches it's timeout without returning anything else than the "continue"-value.
  */
 final class LoopTimeoutException extends RuntimeException
 {
@@ -13,7 +17,7 @@ final class LoopTimeoutException extends RuntimeException
             'Loop timed out after %01.3f seconds (limit: %01.3f seconds) not returning %s',
             $secondsPassed,
             $secondsLimit,
-            var_export($continueValue, true)
+            var_export($continueValue, true),
         ));
     }
 }

@@ -1,5 +1,21 @@
 # TimedLoop
 
+[![packagist name](https://badgen.net/packagist/name/rikta/timed-loop)](https://packagist.org/packages/rikta/timed-loop)
+[![version](https://badgen.net/packagist/v/rikta/timed-loop/latest?label&color=green)](https://github.com/RiktaD/timed-loop/releases)
+[![php version](https://badgen.net/packagist/php/rikta/timed-loop)](https://github.com/RiktaD/timed-loop/blob/main/composer.json)
+
+[![license](https://badgen.net/github/license/riktad/timed-loop)](https://github.com/RiktaD/timed-loop/blob/main/LICENSE.md)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/riktad/timed-loop)](https://github.com/RiktaD/timed-loop/graphs/commit-activity)
+[![open issues](https://badgen.net/github/open-issues/riktad/timed-loop)](https://github.com/RiktaD/timed-loop/issues?q=is%3Aopen+is%3Aissue)
+[![closed issues](https://badgen.net/github/closed-issues/riktad/timed-loop)](https://github.com/RiktaD/timed-loop/issues?q=is%3Aissue+is%3Aclosed)
+
+[![ci](https://badgen.net/github/checks/riktad/timed-loop?label=ci)](https://github.com/RiktaD/timed-loop/actions?query=branch%3Amain+workflow%3A%22Testing+Query%22+workflow%3Acreate-release++)
+[![dependabot](https://badgen.net/github/dependabot/riktad/timed-loop)](https://dependabot.com)
+[![maintainability score](https://badgen.net/codeclimate/maintainability/RiktaD/timed-loop)](https://codeclimate.com/github/RiktaD/timed-loop)
+[![tech debt %](https://badgen.net/codeclimate/tech-debt/RiktaD/timed-loop)](https://codeclimate.com/github/RiktaD/timed-loop/issues)
+[![maintainability issues](https://badgen.net/codeclimate/issues/RiktaD/timed-loop?label=maintainability%20issues)](https://codeclimate.com/github/RiktaD/timed-loop/issues)
+
+
 Run an endless loop until it returns something different, but limit it by time
 
 ## Installation 
