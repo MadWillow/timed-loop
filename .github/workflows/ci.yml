@@ -1,4 +1,4 @@
-name: Testing TimedLoop
+name: Testing Query
 on: [push, pull_request]
 
 jobs:
