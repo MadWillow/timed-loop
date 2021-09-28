@@ -16,20 +16,6 @@ use Rikta\TimedLoop\TimedLoop;
  */
 final class TimedLoopTest extends TestCase
 {
-    public function maxSecondsDataProvider(): Generator
-    {
-        yield [0.1, 0.05];
-
-        yield [0.5, 0.05];
-    }
-
-    public function retryAfterMicroSecondsDataProvider(): Generator
-    {
-        yield [50_000, 0.1, 5_000];
-
-        yield [100_000, 0.5, 5_000];
-    }
-
     /** @test */
     public function doesNotThrowExceptionIfInstructedSo(): void
     {
@@ -121,6 +107,20 @@ final class TimedLoopTest extends TestCase
         } catch (LoopTimeoutException $exception) {
         }
         self::assertEqualsWithDelta($seconds, microtime(true) - $time, $accuracy);
+    }
+
+    public function maxSecondsDataProvider(): Generator
+    {
+        yield [0.1, 0.05];
+
+        yield [0.5, 0.05];
+    }
+
+    public function retryAfterMicroSecondsDataProvider(): Generator
+    {
+        yield [50_000, 0.1, 5_000];
+
+        yield [100_000, 0.5, 5_000];
     }
 
     /**

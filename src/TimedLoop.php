@@ -47,12 +47,10 @@ class TimedLoop
                 return $result;
             }
 
-            if (($current = microtime(true)) > $end) {
-                if ($this->throwsException) {
-                    throw new LoopTimeoutException($current - $start, $this->maxSeconds, $this->continueReturn);
-                }
+            $current = microtime(true);
 
-                return $result;
+            if ($current > $end) {
+                return $this->timeoutReached($result, $start, $current);
             }
             usleep($this->retryAfterMicroseconds);
         }
@@ -101,6 +99,22 @@ class TimedLoop
         $this->throwsException = false;
 
         return $this;
+    }
+
+    /**
+     * handles the reaching of the timeout, depending on config; e.g. throws an exception by default.
+     *
+     * @param mixed $result
+     * @param mixed $start
+     * @param mixed $current
+     */
+    private function timeoutReached($result, $start, $current)
+    {
+        if ($this->throwsException) {
+            throw new LoopTimeoutException($current - $start, $this->maxSeconds, $this->continueReturn);
+        }
+
+        return $result;
     }
 
     /** static shortcut for the initialisation & execution of a loop with default parameters. */
